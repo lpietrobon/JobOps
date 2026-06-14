@@ -1,0 +1,27 @@
+profile:
+  target_roles: ["machine learning", "trust and safety", "integrity", "ai safety", "genai", "health ai"]
+  negative_keywords: ["crypto", "web3", "defense"]
+  locations:
+    accepted: ["San Francisco", "Bay Area", "Remote"]
+    rejected: ["onsite only outside Bay Area"]
+  seniority:
+    accepted: ["senior", "staff", "principal", "lead", "manager"]
+  compensation:
+    min_base: null
+    min_total: null
+runtime:
+  max_concurrency: 1
+  request_timeout_seconds: 30
+  sleep_between_requests_seconds: 2
+  raw_snapshot_retention_days: 60
+  max_tasks_to_export_per_run: 50
+sources:
+  greenhouse: {enabled: true, companies: []}
+  lever: {enabled: true, companies: []}
+  ashby: {enabled: true, companies: []}
+  custom_urls:
+    enabled: true
+    urls:
+      - {name: "a16z Portfolio Jobs", url: "https://portfoliojobs.a16z.com/jobs"}
+      - {name: "Kleiner Perkins Jobs", url: "https://jobs.kleinerperkins.com/jobs"}
+      - {name: "Levels Who's Still Hiring", url: "https://www.levels.fyi/still-hiring/"}
